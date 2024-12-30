@@ -1,5 +1,10 @@
-## Azure CLI
+## Azure CLI Examples
 
+### Login
+Changes to the CLI login method as they no longer support automatic browser redirect.  
+```
+az login --use-device-code
+```
 ### RBAC Custom Role
 
 
@@ -23,7 +28,7 @@ export name=landreg-b5
 
 az storage queue delete -n $name --fail-not-exist --account-name $storeacc
 ```
-In cases where there might bea large number of Queue's, deleting them individually can be slow.  To delete every Queue, combine a list and delete operation using linux bash xargs command.
+In cases where there might bea large number of Queue's, deleting them individually can be slow.  To delete every Queue with a single command, combine a list and delete operation using linux bash xargs command.
 ```
 az storage queue list --prefix $prefix --account-name $storeacc --query "[].name" -o tsv | xargs -L1 -P10 -I{} az storage queue delete --fail-not-exist --account-name $storeacc -n {}
-``
+```

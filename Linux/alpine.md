@@ -1,5 +1,5 @@
 
-## Alpine WSL
+## Linux: Alpine WSL
 On first startup set your username and password.  
 ```
 Enter new UNIX username: <user>
