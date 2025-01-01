@@ -1,5 +1,5 @@
 ## Python: Alpine WSL
-Add [virtualenv](https://virtualenv.pypa.io/en/latest/user_guide.html) to Alpine as python3-venv does not exist. 
+Add [virtualenv](https://virtualenv.pypa.io/en/latest/user_guide.html) to Alpine. 
 ```
 doas apk add py3-virtualenv
 ```
@@ -12,28 +12,35 @@ source .venv/bin/activate
 ## Python: Debian WSL
 If you are developing Azure Functions then also ensure it is compatible with Function Apps.  
 Add the basic linux tools such as gcc, open-ssh (within git), etc.  
-```posix
+```bash
 sudo apt-get install wget
 sudo apt-get install curl
 sudo apt-get install git
 sudo apt-get install build-essential
 ```
 
+And for additional packages needed for Python Make:
+```bash
+sudo apt install zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libsqlite3-dev libreadline-dev libffi-dev libbz2-dev
+```
+
 Download a python tgz file and install as the default in debian, which is located in the */usr/local/lib/pythonx.xx* folder but which runs from the */usr/local/bin* location.    
-```posix
-tar -xvf <python-file>.tgz
-cd python-x.x.x
+```bash
+wget -q https://www.python.org/ftp/python/3.12.8/Python-3.12.8.tar.xz
+
+tar -xvf Python-3.12.8.tar.xz.xz
+cd python-3.12.8
 ./configure --enable-optimizations
 sudo make
 sudo make install
 ```
 If you want to add a another python version then make it as an alternative install which puts it into the users home folder path.  
-```posix
+```bash
 sudo make altinstall
 ```
 
 Finish adding other python installs.  
-```posix
+```bash
 sudo apt-get install python3-venv
 sudo apt-get install python3-pip
 ```

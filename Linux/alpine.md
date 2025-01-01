@@ -1,23 +1,23 @@
 
 ## Linux: Alpine WSL
 On first startup set your username and password.  
-```
+```bash 
 Enter new UNIX username: <user>
 New password:
 Retype new password:
 ```
 Alpine has doas instead of sudo.  Install it.     
-```
+```bash
 su root
 apk add doas
 ```
 Next add our user to the 'wheel' group (which allows execution of doas commands).  Show your groups.  
-```
+```bash
 adduser <user> wheel
 groups <user>
 ```
 Lastly, ensure the wheel group has permission to run doas by setting the config.   
-```
+```bash
 vi /etc/doas.d/doas.conf
 permit :wheel as root
 :wq
@@ -26,7 +26,7 @@ permit :wheel as root
 ### WSL Bug
 There seems to be a problem with the WSL Alpine image when configuring doas, resulting in 'authorization failure' messages being issued.  
 A temporary work-around is to set the wheel group as nopass to doas.  
-```
+```bash
 vi /etc/doas.d/doas.conf
 permit nopass :wheel as root
 :wq
@@ -34,32 +34,32 @@ permit nopass :wheel as root
   
 ### Configure Alpine Environment
 Update alpine.
-```
+```bash
 doas apk update
 doas apk upgrade
 ```
 If you prefer the Bash shell, see if it exists.  
-```
+```bash
 cat /etc/shells
 ```
 If not then add it.  
-```
+```bash
 doas apk add bash
 doas apk add bash-doc
 doas apk add bash-completion
 ```
 Then slightly alter the shell setting of your user to use bash on login. 
-```
+```bash
 doas vi /etc/passwd
 <user>:x:1000:1000:User.Name:/home/<usewr>:/bin/bash
 ```
 Login again and see if it is true.  Use the Process Status command as the most versatile method.  
-```
+```bash
 echo $SHELL
 ps
 ```
 You may want some aliases in your bash environment.  Most commonly, the faster list commands or to use a python short name.  Create a .bashrc file, as this is executed for every non-login shell.  
-```
+```bash
 cd ~
 vi .bashrc
 alias ll='ls -lrt'
@@ -70,7 +70,7 @@ If you need to set variables or spawn a process shell and want variables to be i
 When using Bash you can only use .bash_profile which is always executed first in Bash.  But if the .bash_profile does not exist the processing falls through to using .profile, making it the most common way to define these variables in a multi-shell environment.   
 
 In the example below, we take the Deb convention of also executing .bashrc first if we are using that shell.
-```
+```bash
 vi .profile
 # if running bash
 if [ -n "$BASH_VERSION" ]; then
@@ -92,7 +92,7 @@ fi
 :wq
 ```
 Once you are happy with the environment, install some fundamental tools to get started.  
-```
+```bash
 doas apk add curl
 doas apk add git
 doas apk add openssh-keygen
