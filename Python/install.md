@@ -10,6 +10,16 @@ source .venv/bin/activate
 ```
 
 ## Python: Debian WSL
+### Aptitude
+Update the repo then install Python3 and its tools.  
+```bash
+sudo apt update
+sudo apt install python3
+sudo apt install python3-pop
+sudo apt install python3-venv
+```
+
+### Manually
 If you are developing Azure Functions then also ensure it is compatible with Function Apps.  
 Add the basic linux tools such as gcc, open-ssh (within git), etc.  
 ```bash
@@ -21,7 +31,8 @@ sudo apt-get install build-essential
 
 And for additional packages needed for Python Make:
 ```bash
-sudo apt install zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libsqlite3-dev libreadline-dev libffi-dev libbz2-dev
+sudo apt install zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev libbz2-dev
+sudo apt install libsqlite3-0 media-types openssl libexpat1 libnsl2 ca-certificates
 ```
 
 Download a python tgz file and install as the default in debian, which is located in the */usr/local/lib/pythonx.xx* folder but which runs from the */usr/local/bin* location.    
