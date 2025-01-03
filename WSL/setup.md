@@ -112,7 +112,7 @@ ls
 ```
 
 #### Startup User
-To make this a user the default one on startup, edit the wsl.conf file.  
+To make a specific user the default one on startup, edit the wsl.conf file within the linux distro.  
 ```bash
 vi /etc/wsl.conf
 
@@ -120,13 +120,13 @@ vi /etc/wsl.conf
 default=avrob
 :wq
 ```
-To open a new session in that users home directory, edit the WSL conf JSON file:
+To open a new session in that users home directory, edit the WSL conf JSON file entry for the distro:
 ```json
-            {
-                "guid": "{13873086-2643-5f53-88ea-c95295a85640}",
-                "hidden": false,
-                "name": "Alpine321",
-                "source": "Windows.Terminal.Wsl",
-                "startingDirectory": "\\\\wsl$\\Alpine321\\home\\avrob"
-            }
+{
+    "guid": "{13873086-2643-5f53-88ea-c95295a85640}",
+    "hidden": false,
+    "name": "Alpine321",
+    "source": "Windows.Terminal.Wsl",
+    "startingDirectory": "\\\\wsl$\\Alpine321\\home\\avrob"
+}
 ```
