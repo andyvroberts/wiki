@@ -1,4 +1,9 @@
 ## Python: Alpine WSL
+Check the Alpine Package Index for the Alpine version you have installed.  For example, [Alpine 3.21 packages can be found here](https://pkgs.alpinelinux.org/packages?name=python*&branch=v3.21&repo=&arch=x86_64&origin=&flagged=&maintainer=).  
+```bash
+doas apk add python3
+```
+
 Add [virtualenv](https://virtualenv.pypa.io/en/latest/user_guide.html) to Alpine. 
 ```
 doas apk add py3-virtualenv
