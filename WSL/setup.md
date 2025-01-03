@@ -110,3 +110,23 @@ ls
 >>----      -------------       ------      ----
 >>-a----    01/01/2025 10:33    370147328   ext4.vhdx
 ```
+
+#### Startup User
+To make this a user the default one on startup, edit the wsl.conf file.  
+```bash
+vi /etc/wsl.conf
+
+[user]
+default=avrob
+:wq
+```
+To open a new session in that users home directory, edit the WSL conf JSON file:
+```json
+            {
+                "guid": "{13873086-2643-5f53-88ea-c95295a85640}",
+                "hidden": false,
+                "name": "Alpine321",
+                "source": "Windows.Terminal.Wsl",
+                "startingDirectory": "\\\\wsl$\\Alpine321\\home\\avrob"
+            }
+```
