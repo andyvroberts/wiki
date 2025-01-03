@@ -110,6 +110,18 @@ ls
 >>----      -------------       ------      ----
 >>-a----    01/01/2025 10:33    370147328   ext4.vhdx
 ```
+---
+
+### Add a New WSL Environment
+Download an installation file for a Linux environment.  
+```bash
+wget -q https://dl-cdn.alpinelinux.org/alpine/v3.21/releases/x86_64/alpine-minirootfs-3.21.0-x86_64.tar.gz
+```
+Then import the downloaded image and give it a WSL name.  
+```bash
+wsl --import Alpine321 C:\WSL\alpine321 "C:\WSL\alpine-minirootfs-3.21.0-x86_64.tar.gz"
+```
+Add a user, setup the shell and other details.  
 
 #### Startup User
 To make a specific user the default one on startup, edit the wsl.conf file within the linux distro.  
