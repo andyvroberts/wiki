@@ -1,18 +1,18 @@
 ## Python : Tools
 
-### SSH Keygen
-Generat a public/private key pair. 
+### Jupyter
+Install a Jupyter kernel for the VS Code Jupyter extension.
 ```
-ssh-keygen
+pip install ipython ipykernel
+```
+If you installed this in a .venv then the python environment is the same as the Jupyter server location.  
+
+To add an api key in a VS Code notebooke use this: 
+```
+import getpass
+api_key = getpass.getpass("enter the api key")
 ```
 
-### Git Configuration
-Create some required global settings.
-```
-git config --global init.defaultBranch main
-git config --global user.name "name"
-git config --global user.email "name@email"
-```
 
 ### Parquet
 To read parquet formatted files via the command line, install the cli.
