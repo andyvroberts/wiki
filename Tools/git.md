@@ -1,7 +1,7 @@
 
 ## SSH Keygen
 This sample is for linux environments only and assumes you have openssh-client installed.  
-Generat a public/private key pair. 
+Generate a public/private key pair. 
 ```
 ssh-keygen
 ```
