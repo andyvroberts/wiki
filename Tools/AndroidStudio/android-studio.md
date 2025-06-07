@@ -58,3 +58,12 @@ In Android Studio go to File > Settings > Plugins and install Flutter.
 
 Now you can open a new Flutter Project from the menu.  
 Add the Flutter path when prompted (e.g. C:\Users\avrob\Dev\Flutter) then you can continue.  
+
+### Changing Project Settings
+To add a new platform to an existing project, open the terminal in Android Studio and enter:
+```
+flutter create --platforms=windows
+```
+This will add Windows support if it does not already exist in the projects folder structure.  
+
+
