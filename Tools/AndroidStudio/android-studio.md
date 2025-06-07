@@ -52,5 +52,9 @@ After installing Android Studio and the Emulator, you must accept the android li
 flutter doctor --android-licenses
 ```
 
+## Android Studio
 To open a Flutter peoject you must first install the Plugin.  
 In Android Studio go to File > Settings > Plugins and install Flutter.  
+
+Now you can open a new Flutter Project from the menu.  
+Add the Flutter path when prompted (e.g. C:\Users\avrob\Dev\Flutter) then you can continue.  
