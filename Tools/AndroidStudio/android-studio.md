@@ -52,6 +52,11 @@ After installing Android Studio and the Emulator, you must accept the android li
 flutter doctor --android-licenses
 ```
 
+To create a new empty flutter project run the CLI instruction:  
+```
+flutter create --empty patterns_codelab
+```
+
 ## Android Studio
 To open a Flutter peoject you must first install the Plugin.  
 In Android Studio go to File > Settings > Plugins and install Flutter.  
