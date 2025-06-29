@@ -16,6 +16,12 @@ eval $(ssh-agent)
 ssh_add ~/.ssh/id_rsa
 ```
 
+To clone a repository:
+```
+git clone git@github.com:<userid>/wiki.git
+git clone git@ssh.dev.azure.com:v3/<userid>/Dev24/Dev24
+```
+
 ## Git Configuration
 Create some required global settings.
 ```
