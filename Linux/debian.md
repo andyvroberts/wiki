@@ -28,4 +28,12 @@ To Delete a user and remove the home folder, su (switch user) to root and run:
 deluser avrob --remove-home
 ```
 
+Add basic packages
+```
+sudo apt update
+sudo apt upgrade
+sudo apt-get install wget
+sudo apt-get install git
+sudo apt install openssh-client
+```
 
