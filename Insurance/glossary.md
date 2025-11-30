@@ -20,8 +20,17 @@ Each US state has local insurance companies.  No Lloyds syndicates participate i
 
 - Gernally covers Airport Premises, Products and Hangers - physical damage, loss, liability
 
+### Cedant 
+The original insurer who passes risks to reinsurers, by the process known as Outwards Reinsurance (OWRI).  
+
+### Cession
+The share of some (inward) risks passed to (outwards) reinsurers.
+
 ### Excess
 The monetary amount deducted from each claim.  Usually, this amount is voluntary and results in a lower premium.
+
+### Facultative
+A type of Reinsurance purchased for a single risk.  Usually they are either of high-value or too unusual to be attached in a Treaty. 
 
 ### Line of Busines (LOB)
 A categorisation that groups insured risks.  Maybe for regulatory, geographic, risk assessment or other analytic purposes.  Less strictly defined then Class and not to be confused with the signed line of a Lineslip.  
@@ -109,12 +118,21 @@ Common examples include P&C (property and casualty) or CGL (commerical general l
 
 - Generally legal action for breaches of trademark or copyright - loss, liability
 
+### Non-Proportional
+A type of Reinsurance where the Premium and Claim do not have a direct correlatoin. <br/>Reinsurance Policies of this type are often arranged in vertical Layers.  The top-most layer can sometimes be for an unlimited amount.
+
 ### Open Market
 Traditional Broker led insurance placements.  Includes both individual and Subscription Business.
 
 ### Peril
 An event that causes a loss, for example an explosion or a flood.  A Hazzard is a condition which effects or influences a Peril, for example storage of chemicals.  
 Perils can be named in an insurance Policy, however a peril does not need to be explicitly stated for it to be Covered.
+
+### Proportional
+A type of Reinsurance where the Premium and Claim are of equal proportion.  Examples of Proportional Reinsurance are Quota Share and Surplus Treaty.
+
+### Reinstatement
+Applies to Non-Proportional Reinsurance.  If a vertical Layer is claimed against and fully paid out, it is considered exhausted and can pay out no more.  If allowable, the Policy may be Reinstated in the same Underwriting Year, by the payment of additional Premium. 
 
 ### Reinsurance (Class)
 
@@ -123,11 +141,18 @@ Perils can be named in an insurance Policy, however a peril does not need to be 
 - An Insurers entire Portfolio
 - Catastrophe (natural/man-made) losses
 
+### Retrocedant
+Where a Reinsurer purchases a reinsurance product for itself.
+
+### Retrocession
+A Cession where the entity doing the Ceding is itself a Reinsurer.  In effect, outwards reinsurance of inwards reinsurance. 
+
 ### Subscription Business
 The London Market is a subscription market. Multiple insurers can each share a percentage of a risk (depending on their available capacity).  They will receive that percentage of Premium and will be liable for that percentage of any claims.
 
 ### Surplus Lines (US)
 Lloyds syndicates or insurance companies can conduct direct business within US states only after meeting certain criteria for non-local insurers.
 
-
+### Treaty 
+A type of Reinsurance that can cover a wide portfolio or risks, for example a portfolio of property damage within a specific geography.
 
